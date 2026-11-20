@@ -1,0 +1,362 @@
+:root {
+  --teal: #087d7c;
+  --dark: #20343d;
+  --muted: #718087;
+  --pale: #eff7f6;
+  --line: #e1e9ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--dark);
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: var(--teal);
+}
+
+.site-header {
+  min-height: 82px;
+  padding: 16px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark);
+  font-size: 23px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--teal);
+  color: white;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 26px;
+}
+
+.site-header nav a {
+  color: var(--dark);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-header nav a.active {
+  color: var(--teal);
+}
+
+.hero,
+.features {
+  width: min(1120px, 88%);
+  margin: auto;
+}
+
+.hero {
+  min-height: 500px;
+  padding: 55px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.eyebrow {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  margin: 18px 0;
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 1.05;
+}
+
+.intro {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.hero-copy .intro {
+  max-width: 470px;
+  font-size: 17px;
+}
+
+.button {
+  min-height: 49px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 9px;
+  background: var(--teal);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.small-note,
+.disclaimer {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.map-card {
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #edf3f0;
+  background-image:
+    linear-gradient(90deg, transparent 10%, #dce6e2 10% 25%, transparent 25% 31%, #dce6e2 31% 48%, transparent 48% 55%, #dce6e2 55% 74%, transparent 74% 81%, #dce6e2 81% 95%, transparent 95%),
+    linear-gradient(0deg, transparent 8%, #dce6e2 8% 27%, transparent 27% 34%, #dce6e2 34% 57%, transparent 57% 64%, #dce6e2 64% 91%, transparent 91%);
+}
+
+.road {
+  position: absolute;
+  z-index: 1;
+  width: 130%;
+  height: 25px;
+  left: -15%;
+  top: 48%;
+  background: white;
+  transform: rotate(-28deg);
+}
+
+.road-two {
+  top: 60%;
+  transform: rotate(38deg);
+}
+
+.map-label,
+.map-caption {
+  position: absolute;
+  z-index: 2;
+  color: #72817d;
+  font-size: 10px;
+}
+
+.label-one {
+  top: 18%;
+  left: 12%;
+}
+
+.label-two {
+  right: 12%;
+  bottom: 27%;
+}
+
+.parking-pin {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  border: 3px solid white;
+  border-radius: 13px;
+  background: var(--teal);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.pin-one { top: 18%; left: 56%; }
+.pin-two { top: 56%; left: 22%; }
+.pin-three { right: 18%; bottom: 16%; }
+
+.map-caption {
+  left: 12px;
+  bottom: 12px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  background: white;
+}
+
+.features {
+  padding: 18px 0 60px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+}
+
+.feature-icon {
+  color: var(--teal);
+  font-size: 25px;
+}
+
+.feature h2 {
+  margin: 12px 0 8px;
+  font-size: 18px;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+footer {
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.account-page {
+  min-height: 100vh;
+  padding: 35px 16px;
+  display: grid;
+  place-items: center;
+  background: var(--pale);
+}
+
+.account-card {
+  width: min(430px, 100%);
+  padding: 35px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 12px 36px #20343d12;
+}
+
+.account-card h1 {
+  margin: 12px 0 8px;
+  font-size: 32px;
+}
+
+.account-card .intro {
+  margin: 0 0 24px;
+  font-size: 14px;
+}
+
+.demo-form {
+  display: grid;
+  gap: 10px;
+}
+
+.demo-form label {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.demo-form input {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.text-button {
+  justify-self: end;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  color: var(--teal);
+  font: inherit;
+  cursor: pointer;
+}
+
+.full-button {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.account-switch,
+.disclaimer {
+  text-align: center;
+}
+
+.account-switch {
+  margin: 22px 0 14px;
+  font-size: 13px;
+}
+
+.account-switch a {
+  font-weight: 700;
+}
+
+.form-message {
+  min-height: 18px;
+  margin: 4px 0 0;
+  color: var(--teal);
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .site-header nav {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .map-card {
+    height: 280px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .account-card {
+    padding: 26px 20px;
+  }
+}
